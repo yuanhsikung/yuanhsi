@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Welcome</title>
+	<style>
+		body{
+			background-image: url(https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+		}
+		div{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			padding: 5px 10px;
+			background-color: rgba(7, 179, 185, 0.753);
+			color: white;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
+		button{
+			background-color: rgba(7, 179, 185, 0.753);
+			color: white;
+			width: 100%;
+			max-width: 100px;
+			height: 40px;
+			border: none;
+			border-radius: 5px;
+			margin-right: 5px;
+		}
+	</style>
+</head>
+<body>
+<form method="post" action="#">
+	{% csrf_token %}
+	<input type="hidden" name="email" value="{{ email }}">
+	<div>
+		<button type="button" onclick="location.href='/words82/'">查八字</button>
+		<button type="button" onclick="location.href='/table/'">查公司</button>
+		<button type="button" onclick="location.href='/modifydatas/'">修改基本資料</button>
+		<button type="button" onclick="location.href='/postReset/'">修改密碼</button>
+		<button type="button" onclick="location.href='/logout/'">登出</button>
+	</div>
+</form>
+<br><br><br><br>
+<div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,34 @@
+<!-- table.html -->
+{% if data %}
+    <form method="post" action="{% url 'home' %}">
+        {% csrf_token %}
+        <button type="submit">返回主頁</button>
+        <input type="hidden" name="email" value="{{ email }}">
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>屬性</th>
+                <th>股票代碼</th>
+                <th>公司名稱</th>
+                <th>所屬產業</th>
+                <th>New_ROE</th>
+                <th>Next_ROE</th>
+                <th>Statuses</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+                <tr>
+                    <td>{{ row.屬性 }}</td>
+                    <td>{{ row.股票代碼 }}</td>
+                    <td>{{ row.公司名稱 }}</td>
+                    <td>{{ row.所屬產業 }}</td>
+                    <td>{{ row.New_ROE }}</td>
+                    <td>{{ row.Next_ROE }}</td>
+                    <td>{{ row.statuses }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endif %}

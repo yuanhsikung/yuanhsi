@@ -1,0 +1,14 @@
+<!-- myreport/Mysite/templates/查詢.html -->
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>查詢頁面</h1>
+
+  <form method="post">
+    {% csrf_token %}
+    <input type="submit" name="search_company" value="查詢公司">
+    <input type="submit" name="search_horoscope" value="查詢八字">
+    <input type="submit" name="update_profile" value="修改資料">
+    <input type="submit" name="logout" value="登出">
+  </form>
+{% endblock %}

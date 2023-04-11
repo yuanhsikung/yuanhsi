@@ -1,0 +1,17 @@
+<html>  
+<head>  
+    <title>OTP Verification</title>  
+</head>  
+<body> 
+    <form action="{% url 'validate' %}" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="email" value="{{ email }}">
+        <h4>OTP has been sent to the email id. Please check the email for the confirmation.</h4>
+        {% if invalid %}
+            <p style="color:red;">驗證碼錯誤！！請重新輸入</p>
+        {% endif %}
+        Enter OTP(One-time password): <input type="text" name="otp">
+        <input type="submit" value="Submit">
+    </form>
+</body>  
+</html>

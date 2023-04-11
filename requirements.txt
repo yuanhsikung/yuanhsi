@@ -1,0 +1,6 @@
+Django
+gunicorn 
+django-heroku
+pyrebase4
+firebase_admin
+beautifulsoup4
