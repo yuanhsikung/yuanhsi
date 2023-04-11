@@ -9,7 +9,7 @@ from random import randint
 from django.core.mail import send_mail
 import os
 import firebase_admin
-from firebase_admin import credeials
+from firebase_admin import credentials
 from firebase_admin import auth
 from firebase_admin import db
 from django.http import HttpResponse
