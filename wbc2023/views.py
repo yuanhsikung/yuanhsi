@@ -13,18 +13,7 @@ from firebase_admin import credentials
 from firebase_admin import auth
 from firebase_admin import db
 from django.http import HttpResponse
-from selenium import webdriver
-# from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support import expected_conditions
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.common.by import By
-from bs4 import BeautifulSoup
-from selenium.webdriver.common.keys import Keys
-from time import sleep
-from selenium.common.exceptions import NoSuchElementException
-import csv
-import datetime
-current_year = datetime.datetime.now().year
+
 
 config = {
      "apiKey": "AIzaSyAZoUH8mJsS9h7u2kff5eSU38Dmckm0olY",
