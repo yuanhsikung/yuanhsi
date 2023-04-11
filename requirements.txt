@@ -2,5 +2,5 @@ Django
 gunicorn 
 django-heroku
 pyrebase4
-firebase_admin
+firebase_admin ==6.1.0
 beautifulsoup4
