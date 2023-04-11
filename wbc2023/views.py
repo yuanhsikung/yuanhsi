@@ -196,27 +196,27 @@ def words82(request):
     return render(request, "birth_result.html", {"email": email_t, "horoscope": horoscope, "nativityAnaly": nativityAnaly})
 
 
-# def table(request):
-#     email_t = request.session.get('email_t')
-#     # return HttpResponse("{}".format(email_t))
-#     ref = db.reference('完整公司資料_2')
-#     data = ref.get()
-#     ref2 = db.reference('Humandata/{}/godOfJoy'.format(email_t))
-#     reference_list = ref2.get()
-#     company_data = []
-#     for key1 in reference_list:
-#         if key1 in data:
-#             for value in data[key1].keys():
-#                 company_data.append({
-#                     '屬性': data[key1][value]['屬性'],
-#                     '股票代碼': data[key1][value]['股票代碼'],
-#                     '公司名稱': data[key1][value]['公司名稱'],
-#                     '所屬產業': data[key1][value]['所屬產業'],
-#                     'New_ROE': data[key1][value]['New_ROE'],
-#                     'Next_ROE': data[key1][value]['Next_ROE'],
-#                     'statuses': data[key1][value]['statuses']
-#                 })
-#     return render(request, 'table.html', {'data': company_data, "email": email_t})
+def table(request):
+    email_t = request.session.get('email_t')
+    # return HttpResponse("{}".format(email_t))
+    ref = db.reference('完整公司資料_2')
+    data = ref.get()
+    ref2 = db.reference('Humandata/{}/godOfJoy'.format(email_t))
+    reference_list = ref2.get()
+    company_data = []
+    for key1 in reference_list:
+        if key1 in data:
+            for value in data[key1].keys():
+                company_data.append({
+                    '屬性': data[key1][value]['屬性'],
+                    '股票代碼': data[key1][value]['股票代碼'],
+                    '公司名稱': data[key1][value]['公司名稱'],
+                    '所屬產業': data[key1][value]['所屬產業'],
+                    'New_ROE': data[key1][value]['New_ROE'],
+                    'Next_ROE': data[key1][value]['Next_ROE'],
+                    'statuses': data[key1][value]['statuses']
+                })
+    return render(request, 'table.html', {'data': company_data, "email": email_t})
 
 
 
