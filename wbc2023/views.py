@@ -38,7 +38,7 @@ config = {
 if not firebase_admin._apps:
     # 設定 Firebase Admin SDK 的認證憑證
     cred = credentials.Certificate(
-        "./wbc2023-8cd43-firebase-adminsdk-ndv66-5c84199d79.json"
+        "/wbc2023-8cd43-firebase-adminsdk-ndv66-5c84199d79.json"
 )
     firebase_admin.initialize_app(cred, {
         'databaseURL': 'https://wbc2023-8cd43-default-rtdb.firebaseio.com'
