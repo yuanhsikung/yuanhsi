@@ -9,7 +9,7 @@ from random import randint
 from django.core.mail import send_mail
 import os
 import firebase_admin
-from firebase_admin import credentials
+from firebase_admin import credeials
 from firebase_admin import auth
 from firebase_admin import db
 from django.http import HttpResponse
@@ -38,7 +38,8 @@ config = {
 if not firebase_admin._apps:
     # 設定 Firebase Admin SDK 的認證憑證
     cred = credentials.Certificate(
-        "wbc2023-8cd43-firebase-adminsdk-ndv66-5c84199d79.json")
+        "wbc2023-8cd43-firebase-adminsdk-ndv66-5c84199d79.json"
+)
     firebase_admin.initialize_app(cred, {
         'databaseURL': 'https://wbc2023-8cd43-default-rtdb.firebaseio.com'
     })
